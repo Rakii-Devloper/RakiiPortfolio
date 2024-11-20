@@ -1,0 +1,20 @@
+module.exports = {
+  content: ["./src/**/*.{html,js,jsx}"], // Adjust to your paths
+  theme: {
+    extend: {
+      colors: {
+        darkYellow: '#bda300', // Custom dark yellow color
+      },
+      keyframes: {
+        blink: {
+          "0%": { borderColor: "transparent" },
+          "50%": { borderColor: "white" },
+          "100%": { borderColor: "transparent" },
+        },
+      },
+      animation: {
+        blink: "blink 0.8s step-end infinite", // Typing cursor effect
+      },
+    },
+  },
+};
