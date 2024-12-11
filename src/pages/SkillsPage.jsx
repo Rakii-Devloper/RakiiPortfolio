@@ -108,29 +108,53 @@ const SkillsPage = () => {
   return (
     <section className="flex flex-col md:flex-row w-full min-h-screen text-center py-20">
       {/* Sidebar */}
-      <div className="w-full md:w-1/4 p-6 bg-gray-100 rounded-lg">
+      <div className=" hidden md:block w-full md:w-1/4 p-10 justify-center items-center">
         <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
-        <div className="space-y-4">
+        <div className="space-y-10 ">
           {categories.map((category) => (
             <button
-              key={category}
+            key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`text-xl p-2 w-full text-left border-l-4 ${
-                selectedCategory === category
-                  ? 'border-blue-500 text-blue-500 font-semibold'
-                  : 'border-transparent'
-              } hover:border-blue-300 hover:text-blue-300`}
-            >
-              {category}
-            </button>
+            className={`group flex items-center py-3 w-max text-left px-4 rounded-2xl border-4 ${
+              selectedCategory === category
+                ? "bg-gray-800 text-white border-gray-800"
+                : "bg-gray-100 text-gray-700 border-gray-300"
+            } hover:bg-gray-800 hover:text-white transition-all`}
+          >
+            <span
+              className="nav-indicator mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-hover:mr-10 group-focus-visible:w-16 group-focus-visible:bg-gray-200"
+            ></span>
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </button>
           ))}
         </div>
       </div>
-
+{/* {navabar} */}
+      <div className=" block md:hidden w-full md:w-1/4 p-10 justify-center items-center">
+        <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
+        <div className="space-x-10 flex">
+          {categories.map((category) => (
+            <button
+            key={category}
+              onClick={() => setSelectedCategory(category)}
+            className={`group flex items-center py-3 w-max text-left px-4 rounded-2xl border-4 ${
+              selectedCategory === category
+                ? "bg-gray-800 text-white border-gray-800"
+                : "bg-gray-100 text-gray-700 border-gray-300"
+            } hover:bg-gray-800 hover:text-white transition-all`}
+          >
+            <span
+              className="nav-indicator mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-hover:mr-10 group-focus-visible:w-16 group-focus-visible:bg-gray-200"
+            ></span>
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </button>
+          ))}
+        </div>
+      </div>
       {/* Skills */}
       <div className="w-full md:w-3/4 p-6">
         <h3 className="text-2xl font-semibold mb-6">{selectedCategory}</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {skillsData[selectedCategory].map((skill, index) => {
             const data = {
               labels: ['Skill %'],
@@ -150,71 +174,28 @@ const SkillsPage = () => {
             };
 
             return (
-//               <div
-//                 key={index}
-//                 className={`p-4 w-72 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105`}
-//                 onMouseEnter={() => setHovered(index)}
-//                 onMouseLeave={() => setHovered(null)}
-//               >
-//                 <div
-//                   className="flex flex-col bg-gradient-to-r from-indigo-500 to-blue-600 p-4 rounded-3xl"
-//                   style={{
-//                     boxShadow: hovered === index
-//                       ? `0 0 12px 4px ${skill.color}, 0 0 25px 8px ${skill.color}`
-//                       : 'none',
-//                   }}
-//                 >
-//                   <div className="flex items-center justify-between mb-4">
-//                     <h4 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
-//                       {skill.name}
-//                     </h4>
-//                     {/* <img src={skill.logo} alt={skill.name} className="w-12 h-12 object-contain" /> */}
-//                     <img
-//   src={skill.logo}
-//   alt={skill.name}
-//   className="object-contain"
-//   style={{
-//     width: `${hovered === index ? 60 : 48}px`, // Slightly enlarge on hover
-//     height: `${hovered === index ? 60 : 48}px`,
-//     transition: 'all 0.3s ease', // Smooth animation
-//     borderRadius: '8px', // Optional rounded effect
-//   }}
-// />
-
-//                   </div>
-//                   <div className="flex items-center justify-between">
-//                     <div className="relative w-24 h-24">
-//                       <Doughnut data={data} options={options} />
-//                     </div>
-//                     <div className="flex flex-col justify-center text-center">
-//                       <p className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
-//                         {animatedPercentages[index]}%
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
 <div
   key={index}
-  className={`p-4 w-72 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105`}
+  className={`p-4 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105`}
   onMouseEnter={() => setHovered(index)}
   onMouseLeave={() => setHovered(null)}
   style={{
-    //backgroundImage: skill.backgroundImage || 'none', // Use background image if defined
-    backgroundSize: 'cover', // Ensure the image covers the card
-    backgroundPosition: 'center', // Center the image
-    backgroundRepeat: 'no-repeat', // Prevent tiling
-    borderRadius: '24px', // Match the existing rounded corners
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center', 
+    backgroundRepeat: 'no-repeat', 
+    borderRadius: '24px', 
+    // backgroundColor: hovered === index ? skill.color : 'initial', // Set hover color as background
+
     boxShadow: hovered === index
       ? `0 0 12px 4px ${skill.color}, 0 0 25px 8px ${skill.color}`
       : 'none',
   }}
 >
   <div
-    className="flex flex-col bg-gradient-to-r from-indigo-500 to-blue-600 p-4 rounded-3xl"
+    className="flex flex-col bg-gradient-to-r from-teal-600 to-purple-600 shadow-sm shadow-teal-500/50 p-4 rounded-3xl"
     style={{
       backgroundColor: 'rgba(0, 0, 0, 0.6)', // Add overlay for readability
-      backdropFilter: 'blur(4px)', // Optional blur effect
+      backdropFilter: 'blur(4px)', // Optional blur effect 
       borderRadius: 'inherit', // Match the card's border-radius
     }}
   >
@@ -246,7 +227,6 @@ const SkillsPage = () => {
     </div>
   </div>
 </div>
-
             );
           })}
         </div>

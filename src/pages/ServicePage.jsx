@@ -64,20 +64,18 @@ const ServicesPage = () => {
   ];
 
   return (
-    <section className="w-full min-h-screenbg-white/50 backdrop-blur-lg py-20 flex flex-col justify-center items-center">
+    <section className="w-full min-h-screen bg-white/50 backdrop-blur-lg flex flex-col justify-center items-center">
       {/* About Me Section (First) */}
-      {/* About Me Section */}
-
-      <ProfileCard/>
-
+      <ProfileCard />
 
       {/* Services Section (Second) */}
-      <div className="w-full px-4 flex justify-center items-center">
-        <div className="relative flex gap-4 transition-transform duration-1000 ease-in-out">
+      <div className="w-full md:w-[70%] px-4 flex justify-center items-center">
+        {/* Grid layout with responsive columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 transition-transform duration-1000 ease-in-out">
           {displayedServices.map((service) => (
             <div
               key={service.id}
-              className="service-card bg-[#2F2F2F] p-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-in-out flex justify-center items-center h-72 w-64"
+              className="service-card bg-[#2F2F2F] p-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-in-out flex justify-center items-center h-80 w-full max-w-xs"
             >
               <div className="flex justify-center items-center flex-col w-full">
                 {/* Icon */}
@@ -94,8 +92,6 @@ const ServicesPage = () => {
             </div>
           ))}
         </div>
-
-       
       </div>
     </section>
   );

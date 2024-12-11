@@ -11,14 +11,11 @@ const ProfileCard = () => {
   className="flex items-center justify-center "
 >
   <img
-    className=" w-auto h-auto lg:w-[80%]  sm:w-[40%] rounded-full object-cover transition-all duration-500 transform hover:scale-125 hover:shadow-xl"
+    className=" w-[50%] lg:w-[90%] md:w-[90%] sm:w-[100%] h-auto rounded-full object-cover transition-all duration-500 transform hover:scale-125 hover:shadow-xl"
     src="../src/assets/images/dummy1.jpg"
     alt="Profile picture"
   />
 </div>
-
-
-      
       <div className="flex flex-col items-center text-center sm:items-stretch sm:text-left">
         <div className="mb-4 flex flex-col justify-between sm:flex-row sm:items-center">
           <h4 className="text-3xl font-semibold text-gray-800 mb-4 sm:m-0 transition-all duration-200">

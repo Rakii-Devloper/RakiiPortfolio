@@ -1,148 +1,169 @@
-import { useState, useEffect } from 'react';
-import ModalPopUP from '../components/ModalPopup';
+import { useState, useEffect } from "react";
 
 const ProjectsPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('freelancing'); // Default category
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState("freelancing");
+  const [loaded, setLoaded] = useState(false);
 
   const projects = {
     freelancing: [
       {
         title: "Instakart",
-        description: "E-commerce website focused on the Caribbean market.",
-        link: "https://example.com/instakart",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["React", "Sass", "Bootstrap", "Redux", "Node.js", "AWS"]
+        description: "An e-commerce platform tailored for the Caribbean market.",
+        image: "../../src/assets/images/projectsimages/instakart.jpg",
       },
       {
-        title: "NUwav",
-        description: "Mobile app with sports news, fantasy, and sports views.",
-        link: "https://example.com/nuwav",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["React Native", "Expo", "UI Libraries"]
+        title: "Nuwav",
+        description: "A mobile app delivering sports news and fantasy leagues.",
+        image: "../../src/assets/images/projectsimages/nuwab.webp",
       },
       {
-        title: "Dodle",
-        description: "Online interview platform using video technology.",
-        link: "https://example.com/dodle",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["React", "Video.js"]
-      }
+        title: "Doodle",
+        description: "A platform for conducting interviews via video.",
+        image: "../../src/assets/images/projectsimages/doodle.png",
+      },
     ],
     company: [
       {
-        title: "Kachng",
-        description: "E-commerce website like Shopify, worked on UI and page speed.",
-        link: "https://example.com/kachng",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["React", "Node.js", "MongoDB"]
+        title: "Kachyng",
+        description: "An e-commerce solution similar to Shopify.",
+        image: "../../src/assets/images/projectsimages/kachyng.png",
       },
       {
         title: "Field Ambassador",
-        description: "Website for managing field ambassador data.",
-        link: "https://example.com/fieldambassador",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["React", "Node.js", "SQL"]
-      }
+        description: "A platform for managing field ambassador operations.",
+        image: "../../src/assets/images/projectsimages/karunya.jpg",
+      },
     ],
     ongoing: [
       {
         title: "PlaneIt",
-        description: "Task planner app with daily tasks and customizable features.",
-        link: "https://example.com/planeit",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["React", "Tailwind CSS", "Node.js", "AWS"]
+        description: "A task planning app with customizable themes.",
+        image: "../../src/assets/images/projectsimages/planeit.webp",
       },
       {
         title: "Divine Meet",
-        description: "Video chat and meeting platform for Bible sharing.",
-        link: "https://example.com/divinemeet",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["React", "Tailwind CSS", "Node.js", "AWS"]
+        description: "A meeting platform for Bible sharing with video chat.",
+        image: "../../src/assets/images/projectsimages/devinemeet.png",
       },
-      {
-        title: "Click Blast",
-        description: "Brain teaser game, fun click-based puzzles.",
-        link: "https://example.com/clickblast",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["React", "JavaScript", "CSS"]
-      }
-    ]
+    ],
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % projects[selectedCategory].length);
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [selectedCategory]); // Re-run when selectedCategory changes
-
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-  };
+    setLoaded(true);
+  }, []);
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
-    setCurrentSlide(0); // Reset slide to the first one
   };
 
   return (
-    <section id="projects" className="w-full min-h-screen bg-gray-100 py-20 flex flex-col justify-center items-center">
-      <h2 className="text-4xl font-bold text-gray-800">My Projects</h2>
-      <p className="text-xl text-gray-600 mt-4">A collection of my work:</p>
-
-      {/* Category Selection */}
-      <div className="flex gap-4 mt-6">
-        <button onClick={() => handleCategoryChange('freelancing')} className="btn">Freelancing</button>
-        <button onClick={() => handleCategoryChange('company')} className="btn">Company</button>
-        <button onClick={() => handleCategoryChange('ongoing')} className="btn">Ongoing</button>
+    <section className="w-full mt-2 min-h-screen flex flex-col">
+      {/* Common Header */}
+      <div className="w-full text-center py-4">
+        <h1 className="text-4xl font-bold text-gray-800">My Projects</h1>
       </div>
 
-      <div className="flex flex-col md:flex-row mt-8 gap-6 px-4 w-full">
-        {/* Left side - Carousel */}
-        <div className="w-full md:w-8/12 h-auto max-h-[500px] sm:max-h-[400px] lg:max-h-[600px] xl:max-h-[700px] relative overflow-hidden">
-  <div
-    className="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
-    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-  >
-    {projects[selectedCategory].map((project, index) => (
-      <div key={index} className="flex-shrink-0 w-full h-full">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="object-cover w-full h-full cursor-pointer"
-          onClick={() => handleProjectClick(project)}
-        />
-      </div>
-    ))}
-  </div>
-</div>
+      {/* Main Content */}
+      <div className="flex flex-col md:flex-row flex-1">
+        {/* Left Side - Intro and Categories */}
+        <div className="w-full md:w-1/2 bg-white p-8 flex flex-col justify-between">
+          <div className=" p-8 flex flex-col items-center justify-center h-screen md:h-[80vh] sm:h-auto">
+            {/* Heading */}
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-center">
+              <a href="/" className="hover:underline">
+                Rakesh Antony
+              </a>
+            </h1>
 
+            {/* Subheading */}
+            <h2 className="mt-10 font-medium tracking-tight sm:text-3xl text-center">
+              Full Stack Developer /
+            </h2>
+            <h2 className="mt-5 text-2xl font-medium tracking-tight sm:text-3xl text-center">
+              React Developer
+            </h2>
 
-        {/* Right side - Project Names */}
-        <div className="w-full md:w-4/12 mt-6 md:mt-0">
+            {/* Description */}
+            <p className="mt-10 text-xl max-w-md leading-normal text-center">
+              I build accessible, pixel-perfect digital experiences for the web.
+              <span className="block mt-7 text-1xl font-medium text-slate-400">
+                Let’s craft something extraordinary together!
+              </span>
+            </p>
+
+            {/* Category Navigation */}
+            <div className="flex pt-10 justify-center items-center md:h-screen">
+              <div className="hidden md:block flex flex-col items-start space-y-10">
+                {Object.keys(projects).map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => handleCategoryChange(category)}
+                    className={`group flex items-center py-3 w-max text-left px-4 rounded-2xl border-4 ${
+                      selectedCategory === category
+                        ? "bg-gray-800 text-white border-gray-800"
+                        : "bg-gray-100 text-gray-700 border-gray-300"
+                    } hover:bg-gray-800 hover:text-white transition-all`}
+                  >
+                    <span
+                      className="nav-indicator mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-hover:mr-10 group-focus-visible:w-16 group-focus-visible:bg-gray-200"
+                    ></span>
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                  </button>
+                ))}
+              </div>
+
+              {/* Navbar for Mobile */}
+              <div className="block md:hidden w-full p-10 justify-center items-center">
+                <div className="space-x-10 flex">
+                  {Object.keys(projects).map((category) => (
+                    <button
+                      key={category}
+                      onClick={() => handleCategoryChange(category)}
+                      className={`group flex items-center py-3 w-max text-left px-4 rounded-2xl border-4 ${
+                        selectedCategory === category
+                          ? "bg-gray-800 text-white border-gray-800"
+                          : "bg-gray-100 text-gray-700 border-gray-300"
+                      } hover:bg-gray-800 hover:text-white transition-all`}
+                    >
+                      <span
+                        className="nav-indicator mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-hover:mr-10 group-focus-visible:w-16 group-focus-visible:bg-gray-200"
+                      ></span>
+                      {category.charAt(0).toUpperCase() + category.slice(1)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Project Cards */}
+        <div className="w-full md:w-1/2 p-8 grid grid-cols-1 gap-6 overflow-y-auto">
           {projects[selectedCategory].map((project, index) => (
             <div
               key={index}
-              className="bg-white p-6 mb-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transform transition duration-300"
-              onClick={() => handleProjectClick(project)}
+              className={`flex bg-white rounded-lg shadow-lg hover:shadow-xl transition-all ${
+                loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              } ease-in-out duration-1000`}
             >
-              <h3 className="text-4xl font-bold text-gray-800 tracking-wide">{project.title}</h3>
-              <p className="mt-2 text-gray-600 text-lg">{project.description}</p>
+              {/* Image Section */}
+              <div className="w-full md:w-2/5">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full rounded-l-lg"
+                />
+              </div>
+
+              {/* Content Section */}
+              <div className="w-full md:w-3/5 p-4 flex flex-col justify-center">
+                <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
+                <p className="text-gray-600 mt-2">{project.description}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Modal Popup for Project Details */}
-      {selectedProject && (
-        <ModalPopUP
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
     </section>
   );
 };

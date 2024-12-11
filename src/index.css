@@ -8,6 +8,16 @@
   }
 }
 /* 
+.project-tooltip {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-item:hover .project-tooltip {
+  opacity: 1;
+} */
+  
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -161,7 +171,8 @@
   transform: rotateY(180deg);
 } */
 
-/* Add this to your CSS file */@keyframes pulse {
+/* Add this to your CSS file */
+@keyframes pulse {
   0% {
     transform: scale(1);
   }
@@ -194,4 +205,80 @@
 
 .row.card-text p {
   color: #d4af37;
+}
+/* 
+.particles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #3498db;
+  opacity: 0;
+  pointer-events: none;
+  animation: particle-movement 4s infinite;
+}
+
+@keyframes particle-movement {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+ */
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  width: 0;
+  font-weight: 800;
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    color: transparent; 
+    -webkit-text-stroke: 2px red; 
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
