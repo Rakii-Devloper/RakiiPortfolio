@@ -36,7 +36,7 @@ const HireMePage = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-white">
+    <section id="hireme" className="min-h-screen flex justify-center items-center bg-white">
       <div className="container mx-auto p-4">
         <div className="rounded-lg relative w-full md:w-2/3 lg:w-2/3 xl:w-2/3 mx-auto shadow-lg border border-gray-300">
           {/* Header Section */}
@@ -159,7 +159,7 @@ const HireMePage = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

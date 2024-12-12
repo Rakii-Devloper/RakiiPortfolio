@@ -57,7 +57,7 @@ const ProjectsPage = () => {
   };
 
   return (
-    <section className="w-full mt-2 min-h-screen flex flex-col">
+    <section  id="projects" className="w-full mt-2 min-h-screen flex flex-col">
       {/* Common Header */}
       <div className="w-full text-center py-4">
         <h1 className="text-4xl font-bold text-gray-800">My Projects</h1>

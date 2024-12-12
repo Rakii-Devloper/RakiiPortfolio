@@ -106,7 +106,9 @@ const SkillsPage = () => {
   }, [hovered, selectedCategory]);
 
   return (
-    <section className="flex flex-col md:flex-row w-full min-h-screen text-center py-20">
+    <section 
+    id="skills"
+    className="flex flex-col md:flex-row w-full min-h-screen text-center py-20">
       {/* Sidebar */}
       <div className=" hidden md:block w-full md:w-1/4 p-10 justify-center items-center">
         <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>

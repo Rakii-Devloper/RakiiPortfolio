@@ -277,8 +277,159 @@ h1 {
   }
 }
 
+
+
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+canvas {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 24px;
+  color: white;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100vh) translateX(-100vw);
+  }
+} 
+
+/* Add this to your global CSS or within the component styles */
+.fix {
+  z-index: 50;
+  bottom: 10px;
+  right: 10px;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+
+/* src/index.css or custom CSS file */
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  35% {
+    left: 41%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  65% {
+    left: 59%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  35% {
+    left: 41%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  65% {
+    left: 59%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  35% {
+    left: 41%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  65% {
+    left: 59%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .animate-move {
+    animation: move 2s linear infinite;
+  }
+  .delay-0 {
+    animation-delay: 0s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-600 {
+    animation-delay: 0.6s;
+  }
+  .delay-800 {
+    animation-delay: 0.8s;
+  }
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+  .delay-1200 {
+    animation-delay: 1.2s;
   }
 }
