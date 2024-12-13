@@ -97,7 +97,7 @@ const HomePage = () => {
           }`}
         >
           <img
-            src="../src/assets/images/devloper1.png"
+            src="./public/assets/images/devloper1.png"
             alt="Animated Developer"
             className="w-[60%] h-auto lg:w-full md:w-[50%] transition-all duration-1000 ease-in-out"
           />
