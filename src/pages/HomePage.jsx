@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import TypingEffect from "../components/TypingEffect";
+import ResumeViewButton from "../components/ResumeViewButton";
 
 const HomePage = () => {
   const [animateImage, setAnimateImage] = useState(false);
@@ -83,10 +84,10 @@ const HomePage = () => {
             optimization.
           </p>
           <div className="mt-5 flex justify-center">
-            <button className="p-8 py-3 border text-xl border-gray-300 text-white font-semibold rounded-lg bg-transparent hover:bg-white hover:text-black transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-gradient-to-r hover:from-blue-500 hover:to-purple-500">
-              Hire Me !!
-            </button>
+            
+             <ResumeViewButton/>
           </div>
+         
         </div>
         <div
           className={`bg-yellow-500 w-full lg:w-[45%] h-100vh flex items-center justify-center transition-all duration-700 ease-in ease-out ${
