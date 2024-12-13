@@ -14,37 +14,37 @@ const SkillsPage = () => {
     Languages: [
       { name: 'JavaScript', 
         level: 95, 
-        logo: './public/assets/images/logos/javascript.png', 
+        logo: '/assets/images/logos/javascript.png', 
         color: '#f7df1e',      
-         backgroundImage: 'url("./public/assets/images/backgrounds/js-bg.jpg")' 
+         backgroundImage: 'url("/assets/images/backgrounds/js-bg.jpg")' 
       },
-      { name: 'C#', level: 85, logo: './public/assets/images/logos/Csharp.png', color: '#68217a' ,backgroundImage: 'url("./public/assets/images/backgrounds/b.jpg")' },
-      { name: 'SQL', level: 80, logo: './public/assets/images/logos/sql.png', color: '#00758f' },
-      { name: 'HTML5', level: 90, logo: './public/assets/images/logos/html5.png', color: '#e44d26' },
-      { name: 'CSS3', level: 90, logo: './public/assets/images/logos/css3.png', color: '#264de4' },
+      { name: 'C#', level: 85, logo: '/assets/images/logos/Csharp.png', color: '#68217a' ,backgroundImage: 'url("/assets/images/backgrounds/b.jpg")' },
+      { name: 'SQL', level: 80, logo: '/assets/images/logos/sql.png', color: '#00758f' },
+      { name: 'HTML5', level: 90, logo: '/assets/images/logos/html5.png', color: '#e44d26' },
+      { name: 'CSS3', level: 90, logo: '/assets/images/logos/css3.png', color: '#264de4' },
       { name: 'Sass', level: 80, logo: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg', color: '#c69e5d' },
     ],
     Libraries: [
-      { name: 'React', level: 95, logo: './public/assets/images/logos/react.png', color: '#61dafb' },
-      { name: 'Redux', level: 85, logo: './public/assets/images/logos/rr.png', color: '#764abc' },
-      { name: 'React Query', level: 80, logo: './public/assets/images/logos/rq.png', color: '#ff4154' },
-      { name: 'Material UI', level: 90, logo: './public/assets/images/logos/mi.png', color: '#0078d4' },
-      { name: 'Bootstrap', level: 85, logo: './public/assets/images/logos/bs.png', color: '#563d7c' },
-      { name: 'TailwindCSS', level: 90, logo: './public/assets/images/logos/tcss.png', color: '#06b6d4' },
-      { name: 'React Bootstrap', level: 80, logo: './public/assets/images/logos/rb.png', color: '#7952b3' }, // React Bootstrap
+      { name: 'React', level: 95, logo: '/assets/images/logos/react.png', color: '#61dafb' },
+      { name: 'Redux', level: 85, logo: '/assets/images/logos/rr.png', color: '#764abc' },
+      { name: 'React Query', level: 80, logo: '/assets/images/logos/rq.png', color: '#ff4154' },
+      { name: 'Material UI', level: 90, logo: '/assets/images/logos/mi.png', color: '#0078d4' },
+      { name: 'Bootstrap', level: 85, logo: '/assets/images/logos/bs.png', color: '#563d7c' },
+      { name: 'TailwindCSS', level: 90, logo: '/assets/images/logos/tcss.png', color: '#06b6d4' },
+      { name: 'React Bootstrap', level: 80, logo: '/assets/images/logos/rb.png', color: '#7952b3' }, // React Bootstrap
     ],
     Tools: [
-      { name: 'Git', level: 95, logo: './public/assets/images/logos/git.png', color: '#f34f29' },
-      { name: 'Postman', level: 85, logo: './public/assets/images/logos/postman.png', color: '#ff6a00' },
-      { name: 'Swagger', level: 80, logo: './public/assets/images/logos/swagger.png', color: '#85ea2d' }, // Swagger
-      { name: 'Webpack', level: 75, logo: './public/assets/images/logos/wp.png', color: '#8dd6f7' },
-      { name: 'VS Code', level: 90, logo: './public/assets/images/logos/vsc.png', color: '#0078d4' },
-      { name: 'Jira', level: 85, logo: './public/assets/images/logos/jira.png', color: '#0065ff' },
-      { name: 'Visual Studio', level: 80, logo: './public/assets/images/logos/vs.png', color: '#5c2d91' },
+      { name: 'Git', level: 95, logo: '/assets/images/logos/git.png', color: '#f34f29' },
+      { name: 'Postman', level: 85, logo: '/assets/images/logos/postman.png', color: '#ff6a00' },
+      { name: 'Swagger', level: 80, logo: '/assets/images/logos/swagger.png', color: '#85ea2d' }, // Swagger
+      { name: 'Webpack', level: 75, logo: '/assets/images/logos/wp.png', color: '#8dd6f7' },
+      { name: 'VS Code', level: 90, logo: '/assets/images/logos/vsc.png', color: '#0078d4' },
+      { name: 'Jira', level: 85, logo: '/assets/images/logos/jira.png', color: '#0065ff' },
+      { name: 'Visual Studio', level: 80, logo: '/assets/images/logos/vs.png', color: '#5c2d91' },
     ],
     Databases: [
-      { name: 'MongoDB', level: 80, logo: './public/assets/images/logos/mdb.png', color: '#47a248' },
-      { name: 'SQL Server', level: 85, logo: './public/assets/images/logos/ss.png', color: '#cc2927' },
+      { name: 'MongoDB', level: 80, logo: '/assets/images/logos/mdb.png', color: '#47a248' },
+      { name: 'SQL Server', level: 85, logo: '/assets/images/logos/ss.png', color: '#cc2927' },
     ],
   };
   

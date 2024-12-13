@@ -12,7 +12,7 @@ const ProfileCard = () => {
 >
   <img
     className=" w-[50%] lg:w-[90%] md:w-[90%] sm:w-[100%] h-auto rounded-full object-cover transition-all duration-500 transform hover:scale-125 hover:shadow-xl"
-    src="./public\assets\images\rakii.jpg"
+    src="\assets\images\rakii.jpg"
     alt="Profile picture"
   />
 </div>

@@ -9,41 +9,41 @@ const ProjectsPage = () => {
       {
         title: "Instakart",
         description: "An e-commerce platform tailored for the Caribbean market.",
-        image: "./public/assets/images/projectsimages/instakart.jpg",
+        image: "/assets/images/projectsimages/instakart.jpg",
       },
       {
         title: "Nuwav",
         description: "A mobile app delivering sports news and fantasy leagues.",
-        image: "./public/assets/images/projectsimages/nuwab.webp",
+        image: "/assets/images/projectsimages/nuwab.webp",
       },
       {
         title: "Doodle",
         description: "A platform for conducting interviews via video.",
-        image: "./public/assets/images/projectsimages/doodle.png",
+        image: "/assets/images/projectsimages/doodle.png",
       },
     ],
     company: [
       {
         title: "Kachyng",
         description: "An e-commerce solution similar to Shopify.",
-        image: "./public/assets/images/projectsimages/kachyng.png",
+        image: "/assets/images/projectsimages/kachyng.png",
       },
       {
         title: "Field Ambassador",
         description: "A platform for managing field ambassador operations.",
-        image: "./public/assets/images/projectsimages/karunya.jpg",
+        image: "/assets/images/projectsimages/karunya.jpg",
       },
     ],
     ongoing: [
       {
         title: "PlaneIt",
         description: "A task planning app with customizable themes.",
-        image: "./public/assets/images/projectsimages/planeit.webp",
+        image: "/assets/images/projectsimages/planeit.webp",
       },
       {
         title: "Divine Meet",
         description: "A meeting platform for Bible sharing with video chat.",
-        image: "./public/assets/images/projectsimages/devinemeet.png",
+        image: "/assets/images/projectsimages/devinemeet.png",
       },
     ],
   };
