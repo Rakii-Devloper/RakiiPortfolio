@@ -1,5 +1,5 @@
 import React, { Suspense, useState, useEffect } from "react";
-import Loader from "./Loader";
+import Loader from "../Loader";
 
 const SuspenseWrapper = ({ children }) => {
   const [showLoader, setShowLoader] = useState(false);

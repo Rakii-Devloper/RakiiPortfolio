@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaCode, FaMobileAlt, FaUserAlt, FaServer, FaLaptopCode } from 'react-icons/fa';
 import ProfileCard from '../components/ProfileCard';
-import SocialLinks from '../components/SocialLinks'; // Import your SocialLinks component
+import SocialLinks from '../components/features/SocialLinks'; // Import your SocialLinks component
 
 const services = [
   {

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import SuspenseWrapper from "./components/SuspenceWrapper";
+import SuspenseWrapper from "./components/features/SuspenceWrapper";
 
 // Lazy load pages and components
 const HomePage = React.lazy(() => import("./pages/HomePage"));
@@ -9,14 +9,14 @@ const HireMePage = React.lazy(() => import("./pages/HireMePage"));
 const NavaBarUI = React.lazy(() => import("./components/NavaBarUI"));
 const Footer = React.lazy(() => import("./components/Footer"));
 const ServicesPage = React.lazy(() => import("./pages/ServicePage"));
-const Menu = React.lazy(() => import("./components/menu"));
+const Menu = React.lazy(() => import("./components/features/menu"));
 const BackgroundEffects = {
-  bubbles: React.lazy(() => import("./components/Bubbles")),
-  snow: React.lazy(() => import("./components/christmas/SnowFlakes")),
-  particles: React.lazy(() => import("./components/particles/ParticlesEfect")),
-  raineffect: React.lazy(() => import("./components/RainEffect")),
-  consffect: React.lazy(() => import("./components/ConstellationEffect")),
-  blast: React.lazy(() => import("./components/Blast")),
+  bubbles: React.lazy(() => import("./components/animation/Bubbles")),
+  snow: React.lazy(() => import("./components/animation/SnowFlakes")),
+  particles: React.lazy(() => import("./components/animation/ParticlesEfect")),
+  raineffect: React.lazy(() => import("./components/animation/RainEffect")),
+  consffect: React.lazy(() => import("./components/animation/ConstellationEffect")),
+  blast: React.lazy(() => import("./components/animation/Blast")),
 };
 
 function App() {

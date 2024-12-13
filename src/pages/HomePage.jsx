@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import TypingEffect from "../components/TypingEffect";
+import TypingEffect from "../components/features/TypingEffect";
 import ResumeViewButton from "../components/ResumeViewButton";
 
 const HomePage = () => {
