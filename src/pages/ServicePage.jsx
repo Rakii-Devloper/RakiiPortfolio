@@ -69,7 +69,7 @@ const ServicesPage = () => {
       </div>
 
       {/* Section B */}
-      <div className="relative w-full m-7">
+      <div className="relative w-full m-7 hidden lg:block">
         <SocialLinks /> {/* Social Links */}
       </div>
 

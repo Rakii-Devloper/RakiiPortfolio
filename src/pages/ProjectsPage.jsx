@@ -59,7 +59,7 @@ const ProjectsPage = () => {
   return (
     <section  id="projects" className="w-full mt-2 min-h-screen flex flex-col">
       {/* Common Header */}
-      <div className="w-full text-center py-4">
+      <div className="w-full text-center py-1">
         <h1 className="text-4xl font-bold text-gray-800">My Projects</h1>
       </div>
 
@@ -93,7 +93,7 @@ const ProjectsPage = () => {
 
             {/* Category Navigation */}
             <div className="flex pt-10 justify-center items-center md:h-screen">
-              <div className="hidden md:block flex flex-col items-start space-y-10">
+              <div className="flex flex-col items-start space-y-10">
                 {Object.keys(projects).map((category) => (
                   <button
                     key={category}
@@ -110,28 +110,6 @@ const ProjectsPage = () => {
                     {category.charAt(0).toUpperCase() + category.slice(1)}
                   </button>
                 ))}
-              </div>
-
-              {/* Navbar for Mobile */}
-              <div className="block md:hidden w-full p-10 justify-center items-center">
-                <div className="space-x-10 flex">
-                  {Object.keys(projects).map((category) => (
-                    <button
-                      key={category}
-                      onClick={() => handleCategoryChange(category)}
-                      className={`group flex items-center py-3 w-max text-left px-4 rounded-2xl border-4 ${
-                        selectedCategory === category
-                          ? "bg-gray-800 text-white border-gray-800"
-                          : "bg-gray-100 text-gray-700 border-gray-300"
-                      } hover:bg-gray-800 hover:text-white transition-all`}
-                    >
-                      <span
-                        className="nav-indicator mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-hover:mr-10 group-focus-visible:w-16 group-focus-visible:bg-gray-200"
-                      ></span>
-                      {category.charAt(0).toUpperCase() + category.slice(1)}
-                    </button>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

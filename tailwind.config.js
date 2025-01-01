@@ -3,7 +3,13 @@ module.exports = {
   theme: {
 
     screens: {
-      'xs': '380px',
+      xs: '320px',       // Extra small
+      sm: '640px',       // Small
+      md: '768px',       // Medium
+      lg: '1024px',      // Large
+      xl: '1280px',      // Extra Large
+      xxl: '1536px',     // Double Extra Large (instead of '2xl')
+      xxxl: '1920px',    // Triple Extra Large
     },
 
     extend: {

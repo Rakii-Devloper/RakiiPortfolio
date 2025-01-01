@@ -132,27 +132,26 @@ const SkillsPage = () => {
         </div>
       </div>
 {/* {navabar} */}
-      <div className=" block md:hidden w-full md:w-1/4 p-10 justify-center items-center">
-        <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
-        <div className="space-x-10 flex">
-          {categories.map((category) => (
-            <button
-            key={category}
-              onClick={() => setSelectedCategory(category)}
-            className={`group flex items-center py-3 w-max text-left px-4 rounded-2xl border-4 ${
-              selectedCategory === category
-                ? "bg-gray-800 text-white border-gray-800"
-                : "bg-gray-100 text-gray-700 border-gray-300"
-            } hover:bg-gray-800 hover:text-white transition-all`}
-          >
-            <span
-              className="nav-indicator mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-hover:mr-10 group-focus-visible:w-16 group-focus-visible:bg-gray-200"
-            ></span>
-            {category.charAt(0).toUpperCase() + category.slice(1)}
-          </button>
-          ))}
-        </div>
-      </div>
+<div className="block md:hidden w-full md:w-1/4 p-10 justify-center items-center">
+  <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
+  <div className="grid grid-cols-2 gap-10">
+    {categories.map((category) => (
+      <button
+        key={category}
+        onClick={() => setSelectedCategory(category)}
+        className={`group flex items-center py-3 w-full text-left px-4 rounded-2xl border-4 ${
+          selectedCategory === category
+            ? "bg-gray-800 text-white border-gray-800"
+            : "bg-gray-100 text-gray-700 border-gray-300"
+        } hover:bg-gray-800 hover:text-white transition-all`}
+      >
+        <span className="nav-indicator mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-hover:mr-10 group-focus-visible:w-16 group-focus-visible:bg-gray-200"></span>
+        {category.charAt(0).toUpperCase() + category.slice(1)}
+      </button>
+    ))}
+  </div>
+</div>
+
       {/* Skills */}
       <div className="w-full md:w-3/4 p-6">
         <h3 className="text-2xl font-semibold mb-6">{selectedCategory}</h3>
