@@ -1,6 +1,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"], // Adjust this to match your project paths
   theme: {
+
+    screens: {
+      'xs': '380px',
+    },
+
     extend: {
     
       rotate: {

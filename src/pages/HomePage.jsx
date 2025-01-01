@@ -20,7 +20,7 @@ const HomePage = () => {
     >
       <div className="bg-white w-full lg:w-[15%] md:w-full flex justify-center items-center transition-all duration-1000 ease-in-out">
         <h1
-          className={`cursor-pointer text-3xl text-black whitespace-nowrap mt-10 m-5 font-extrabold leading-none tracking-tight  xl:text-6xl xl:writing-mode[vertical-rl] xl:rotate-[270deg] xl:line-height[1]  lg:text-5xl lg:writing-mode[vertical-rl] lg:rotate-[270deg] lg:line-height[1] sm:text-4xl md:text-5xl md:rotate-[0deg] md:writing-mode[unset]
+          className={`cursor-pointer text-xl text-black whitespace-nowrap mt-10 m-5 font-extrabold leading-none tracking-tight  xl:text-6xl xl:writing-mode[vertical-rl] xl:rotate-[270deg] xl:line-height[1]  lg:text-5xl lg:writing-mode[vertical-rl] lg:rotate-[270deg] lg:line-height[1] xs:text-3xl sm:text-5xl md:text-6xl md:rotate-[0deg] md:writing-mode[unset]
     ${
       animateName
         ? "opacity-100 translate-x-0 transition-all duration-[1500ms] ease-in-out"
